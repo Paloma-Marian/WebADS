@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Informe o 1º valor:</label>
+    <input type="number" id="valor1">
+    <br>
+    <label >Informe o 2º valor:</label>
+    <input type="number" id="valor2">
+    <br>
+    <label>Informe o operador matemático:</label>
+    <input type="text" id="operador">
+    <button onclick=calcularvalor()>Calcular</button>
+    <script>
+        function calcularvalor(){
+            var primeirovlr = parseInt(document.getElementById('valor1').value)
+            var segundovlr = parseInt(document.getElementById('valor2').value)
+
+            if (isNaN(primeirovlr)) {
+                alert("Informe o primeiro valor!")
+                document.getElementById('valo1').focus()
+                return
+            }
+            switch (operador.value) {
+                case "+": alert(primeirovlr + segundovlr); break
+                case "-": alert(primeirovlr - segundovlr); break
+                case "*": alert(primeirovlr * segundovlr); break
+                case "/": 
+                    if (segundovlr == 0) {
+                        alert("Não é possível dividir por zero.")                    
+                    } else {
+                        alert(primeirovlr / segundovlr)
+                    }
+                default: alert("Invalido!"); break
+            }
+        }
+    </script>
+</body>
+</html>

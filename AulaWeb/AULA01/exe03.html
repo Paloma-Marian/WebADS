@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <style>
+        h1,label {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!--vilson.moro@prof.sc.senac.br-->
+    <h1>Calcula Média do Aluno</h1> <br>
+    <label>Informe as Três notas do aluno.</label> <br>
+    <input type="real" name="nota01" id="nota1" > <br>
+    <input type="real" name="nota02" id="nota2" > <br>
+    <input type="real" name="nota03" id="nota3" > <br>
+    <label>Informe a frequência do aluno.</label> <br>
+    <input type="number" name="freq" id="frequência" maxlength="100" minlength="0"> <br>
+    <button onclick=validaAprovacao()>Verificar se foi aprovado</button>
+    <script>
+        function validaAprovacao(){
+            var nota01 = parseInt(document.getElementById('nota1').value)
+            var nota02 = parseInt(document.getElementById('nota2').value)
+            var nota03 = parseInt(document.getElementById('nota3').value)
+            var frequencia = parseInt(document.getElementById('frequência').value)
+            if (isNaN(nota01) || nota01 < 0 || nota01 > 10) {
+                alert("Nota 1 invalida")
+                document.getElementById('nota1').focus()
+                return
+            }else if(isNaN(nota02) || nota2 < 0 || nota02 > 10){
+                alert("Nota 2 invalida")
+                document.getElementById('nota2').focus()
+                return
+            }else if(isNaN(nota03) || nota3 < 0 || nota03 > 10){
+                alert("Nota 3 invalida")
+                document.getElementById('nota3').focus()
+                return
+            }
+            if (isNaN(frequencia) || frequencia < 0 || frequencia > 100) {
+                alert("frequência invalida")
+                document.getElementById('frequência').focus()
+                return
+            }
+            var media = 0;
+            //--Verificar a Média do aluno--
+            media = nota01 + nota02 + nota03
+            if(media != 0){
+                media = media / 3
+            }
+            //--Validar a frequência do aluno--
+            if(frequencia >= 75 && media >= 7){
+                alert(`Você foi APROVADO, ${frequencia}% de frequência e a média de ${media.toFixed(1)}`)
+            }else{
+                if(frequencia < 75 && media < 7){
+                    alert(`Você foi REPROVADO, ${frequencia}% de frequênca e a média de ${media.toFixed(1)}`)
+                }else if(frequencia < 75){
+                    alert(`Você foi REPROVADO, a frequência é ${frequencia}%. Menor que 75%`)
+                }else{
+                    alert(`Você foi REPROVADO, a média de ${media.toFixed(1)}. Menor que 7.0`)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

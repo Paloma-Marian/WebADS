@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exe01</title>
+    <style>
+        input{
+            color:  azure;
+            background-color: cadetblue;
+            border: 600px;
+            padding: 5px;
+            margin: 5px;
+            left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <label>Nome:</label>
+    <input type="text" id="nome">
+    <br>
+    <label >Idade:</label>
+    <input type="text" id="idade">
+    <button onclick=verificaridade()>Verificar Idade</button>
+    <script>
+        function verificaridade(){
+            if (idade.value >= 18){
+                alert(`${nome.value} - você é maior de idade.`)
+            }
+            else{
+                alert(`${nome.value} - você é menor de idade.`)
+            }       
+        }
+    </script>
+</body>
+</html>

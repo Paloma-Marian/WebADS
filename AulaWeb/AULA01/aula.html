@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula01</title>
+</head>
+<body>
+    <button onclick=ola()>
+        Clique aqui</button>
+
+    <input type="number" id="idade">
+    <button onclick=verificaridade()>
+        Ver Idade</button>
+    
+    <script>
+        function verificaridade(){
+            if(idade.value >= 18){
+                alert("Maior de idade")
+            }else{
+                alert("Menor de idade")
+            }
+        }
+        function ola(){
+            alert('Hellow word!!!')
+        }
+    
+    </script>
+</body>
+</html>
