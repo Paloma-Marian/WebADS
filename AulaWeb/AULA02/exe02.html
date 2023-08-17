@@ -14,5 +14,18 @@
         As cadeiras disponiveis deve estar na cor verde, 
         enquanto que as reservadas devem estar na cor vermelha.
     -->
+    <input type="number" name="nCadeiras" id="nCadeiras" placeholder="Informe um numero de cadeiras">
+    <button onclick="criarSala()">Criar Sala</button>
+    <div id="sala"></div>
+    <script>
+        function criarSala(){
+            var nCadeiras = document.getElementById('nCadeiras').value
+            for (let index = 1; index <= nCadeiras; index++) {
+                var bt = document.createElement('button')
+                bt.innerHTML = `A${index}`
+                document.getElementById('sala').appendChild(bt)
+            }
+        }
+    </script>
 </body>
 </html>
