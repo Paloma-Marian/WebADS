@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nome">Informe nome</label>
+    <input type="text" id="nome" >
+
+    <button
+      onclick="lerNome()"
+    >Clique aqui</button>
+
+    <p></p>
+    <script>
+        function lerNome(){
+           var xnome = document.getElementById('nome') 
+           //alert(xnome.value)
+           var xp = document.getElementsByTagName('p')
+           console.log(xp[0].innerHTML)
+           xp[0].innerHTML = xnome.value
+        }
+    </script>
+
+</body>
+</html>

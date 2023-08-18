@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Hello world</p>
+    <p>olá mundo</p>
+    <button
+       onclick="verParagrafo()"
+    >clique aqui</button>
+
+    <script>
+        function verParagrafo(){
+          var x = document.getElementById('p1') 
+
+          console.log(x)
+
+          var xs = document.getElementsByTagName('p')
+          console.log(xs)
+
+          console.log(xs[0])
+          console.log(xs[1])
+          
+        }
+    </script>
+</body>
+</html>

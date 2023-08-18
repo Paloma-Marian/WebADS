@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilos/estilos.css">
+</head>
+
+<body>
+    <div>
+        <h1>Pagina de contatos</h1>
+        <form action="#">
+            <label for="">Informe nome</label>
+            <input type="text" placeholder="Informe nome" />
+
+            <label for="uf">Selecione o estado</label>
+            <select
+              class="listaUf"
+            id="uf">
+                <option value="SC">Santa Catarina</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="PR">Paraná</option>
+            </select>
+
+            <fieldset>
+                <legend>Preferências</legend>
+                <input type="checkbox" name="" id="livro">
+                <label for="livro">Livros</label>
+
+                <input type="checkbox" name="" id="musica">
+                <label for="musica">Musica</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Sexo</legend>
+                <input type="radio" id="m" name="sexo">
+                <label for="m">Masculino</label>
+
+                <input type="radio" id="f" name="sexo">
+                <label for="f">Femenino</label>
+            </fieldset>
+             
+            <label for="">Comentários</label>
+             <textarea name="" id="" cols="50" rows="5"></textarea>
+             
+           <!--
+             <label for="">Data Nascimento</label>
+             <input type="date" name="" id="">
+
+             <label for="">Mes Nascimento</label> 
+             <input type="month" name="" id="">
+             <input type="time" name="" id="">   
+             <input type="password" name="" id="">   
+             <input type="number" name="" id="">  
+           -->    
+           <input type="button" value="Gravar">   
+
+           <input type="submit" value="Gravar">
+           <button>Gravar</button>
+        </form>
+    </div>
+</body>
+
+</html>

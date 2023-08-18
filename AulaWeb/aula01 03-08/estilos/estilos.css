@@ -1,0 +1,51 @@
+body{
+    background-color: silver;
+}
+
+nav{
+    margin-bottom: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+.frameCentro {
+    background-color: brown;
+}
+
+footer{
+    background-color: aqua;
+    text-align: center;
+}
+
+a{
+    background-color: chartreuse;
+    padding: 10px;
+    text-decoration: none;
+    color: brown;
+}
+
+a:hover{
+    background-color: brown;
+    color: chartreuse; 
+    border-radius: 100px; 
+}
+
+label{
+    font-size: 26px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input[type='text']{
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.listaUf{
+    width: 90%;
+    margin: 10px;
+    padding: 10px; 
+}
+

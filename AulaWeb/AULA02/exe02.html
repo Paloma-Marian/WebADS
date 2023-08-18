@@ -14,17 +14,43 @@
         As cadeiras disponiveis deve estar na cor verde, 
         enquanto que as reservadas devem estar na cor vermelha.
     -->
-    <input type="number" name="nCadeiras" id="nCadeiras" placeholder="Informe um numero de cadeiras">
-    <button onclick="criarSala()">Criar Sala</button>
-    <div id="sala"></div>
+    <div>
+        <input type="number"
+        placeholder="Digite um numero..."
+        id="nCadeiras">
+        <button onclick="criarSala()">Criar Sala</button>
+        <hr>
+        <div id="sala">
+        </div>
+        <hr>
+        <p>Total livres: <span id="livres"></span></p>
+        <p>Total ocupados: <span id="ocupados"></span></p>
+    </div>
     <script>
         function criarSala(){
-            var nCadeiras = document.getElementById('nCadeiras').value
-            for (let index = 1; index <= nCadeiras; index++) {
-                var bt = document.createElement('button')
-                bt.innerHTML = `A${index}`
-                document.getElementById('sala').appendChild(bt)
+            var nCadeiras = document.getElementById("nCadeiras").value
+            for (let i = 1; i <= nCadeiras; i++) {
+                var bt = document.createElement("button")
+                bt.innerHTML = `A${i}`
+                bt.setAttribute("class", "livre")
+                bt.setAttribute("onclick", "reservar(this)")
+                document.getElementById("sala").appendChild(bt)
             }
+            verificar()
+        }
+        function reservar(item) {
+            if (item.getAttribute("class") == "livre") {
+                item.setAttribute("class", "ocupada")
+            } else {
+                item.setAttribute("class", "livre")
+            }
+            verificar()
+        }
+        function verificar() {
+            document.getElementById("livres").innerHTML = 
+            document.getElementsByClassName("livre").length
+            document.getElementById("ocupados").innerHTML = 
+            document.getElementsByClassName("ocupada").length
         }
     </script>
 </body>

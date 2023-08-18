@@ -1,0 +1,17 @@
+instrutorvilsonmoro@gmail.com
+
+vilson.moro@prof.senac.br
+
+http://127.0.0.1:5500/index.html
+
+css
+
+inline -> style
+
+incorporada -> 
+<style>
+   classes{...}
+</style>
+
+
+linkada

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="array">
+    </div>
+    <script>
+        const frutas = ["maça","morango","banana"] //aceita qualquer tipo de valor
+        //frutas.pop()
+        frutas.push("morango")
+        //frutas.shift()
+        frutas.unshift("Limão")
+        
+        const agenda =[
+            {nome: "maria", email: "marian@gmail.com"},
+            {nome: "paloma", email: "paloma@gmail.com"},
+            {nome: "joao", email: "joao@gmail.com"}
+        ]
+        console.log(agenda)
+        
+        for (let index = 0; index < agenda.length; index++) {
+            var p = document.createElement("p")
+            //console.log(agenda[index])   
+            //document.getElementsByTagName('div')[index].innerHTML
+            p.innerHTML = "nome: " + agenda[index].nome
+            document.getElementById("array").appendChild(p)
+            var p = document.createElement("p")
+            p.innerHTML = "email: " + agenda[index].email
+            document.getElementById("array").appendChild(p)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+https://www.w3schools.com/js/js_htmldom.asp
+
+1) Criar uma pagina html que permita informar o nome da pessoa,
+e sua idade. Ao clicar no botão deve mostrar a mensagem se a pessoa é maior ou menor de idade.
+
+2) Criar uma página que solicita ao usuário para informar dois numeros e definir qual operação matemática deseja executar. Mostrar o resultado em um paragráfo.
+
+3) Faça uma página que permita ao usuário informar três notas de aluno (0 a 10). O sistema deve calcular a média. O usuário deve informar a frequencia do aluno (de 0 a 100). O sistema deve verificar se o aluno está aprovado baseado na média e na frequência. 
+
+
