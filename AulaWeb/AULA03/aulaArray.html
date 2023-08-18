@@ -6,7 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="array">
+    <!--
+    <div id="array"></div>
+    -->
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        nome
+                    </td>
+                    <td>
+                        email
+                    </td>
+                    <th>
+                        Excluir
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="contatos">
+            </tbody>
+        </table>
     </div>
     <script>
         const frutas = ["maça","morango","banana"] //aceita qualquer tipo de valor
@@ -22,15 +42,26 @@
         ]
         console.log(agenda)
         
+        let msg = ''
         for (let index = 0; index < agenda.length; index++) {
-            var p = document.createElement("p")
+   //         var p = document.createElement("p")
             //console.log(agenda[index])   
             //document.getElementsByTagName('div')[index].innerHTML
-            p.innerHTML = "nome: " + agenda[index].nome
-            document.getElementById("array").appendChild(p)
-            var p = document.createElement("p")
-            p.innerHTML = "email: " + agenda[index].email
-            document.getElementById("array").appendChild(p)
+   //         p.innerHTML = "nome: " + agenda[index].nome
+   //         document.getElementById("array").appendChild(p)
+   //         var p = document.createElement("p")
+   //         p.innerHTML = "email: " + agenda[index].email
+   //         document.getElementById("array").appendChild(p)
+
+              msg += `<tr>
+                <td>${agenda[index].nome}</td>
+                <td>${agenda[index].email}</td>
+                <td><button onclick="excluir(index)">excluir</button></td>
+                </tr>`
+              document.getElementById('contatos').innerHTML = msg
+        }
+        function excluir(xvalor){
+            agenda.shift[xvalor]
         }
     </script>
 </body>
