@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06-09 Cadastro</title>
+</head>
+<body>
+    <button onclick="gravar()">Gravar</button>
+    <button onclick="lerDados()">Ler dados</button>
+    <button onclick="logout()">Logout</button>
+    <script>
+        let usuarioLogado = localStorage.getItem('user')   
+        let usuariosCadastrados = localStorage.getItem('login')
+        function gravar(){
+            
+            localStorage.setItem('login',JSON.stringify(user))
+        }
+        function lerDados(){
+            console.log(usuarioLogado)
+            console.log(usuariosCadastrados)
+        }
+        function logout(){
+            usuarioLogado = delete
+            window.location.replace('login.html')
+        }
+    </script>
+</body>
+</html>

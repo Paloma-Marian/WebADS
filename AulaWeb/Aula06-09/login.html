@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <input type="text" name="user" id="nome">
+    <input type="password" name="senha" id="senha">
+    <button onclick="chamaPagina()">Logar</button>
+    <script>
+        let user =[
+            {id:1, nome: "Carla",senha:'123' , email: "marian@gmail.com"},
+            {id:2, nome: "Paloma",senha:'123', email: "paloma@gmail.com"},
+            {id:3, nome: "Joao",senha:'123' , email: "joao@gmail.com"}
+        ]
+        function chamaPagina(){
+            localStorage.setItem('login',JSON.stringify(user))
+            verificaLogin()
+        }
+        function verificaLogin(){
+            for (let i = 0; i < user.length; i++) {        
+                if(nome.value == user[i].nome && senha.value == user[i].senha){
+                    let userLogin = user[i]
+                    localStorage.setItem('user',JSON.stringify(userLogin))
+                    window.location.replace('cadastro.html')   
+                }
+            }
+            console.log(user[i])
+        }
+    </script>
+</body>
+</html>
